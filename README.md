@@ -27,10 +27,13 @@ Nesta secção, documento problemas reais que resolvi no Kaggle e em exercícios
 
 ## 🎯 Desafio de Hoje: O Mistério do Filtro e Agrupamento
 
-### 🚩 Código com Erros:
+### ✅ Solução e Aprendizado:
+- [x] *Corrigido:* Troquei = por IS NOT NULL.
+- [x] *Agrupamento:* Adicionei o SUM() para somar as vendas.
+
 ```sql
-SELECT nome_cliente, total_vendas
+SELECT nome_cliente, SUM(total_vendas) AS total
 FROM tabela_vendas
-WHERE nome_cliente = NULL
+WHERE nome_cliente IS NOT NULL
 GROUP BY nome_cliente
-HAVING total_vendas > 1000
+HAVING total > 1000;
