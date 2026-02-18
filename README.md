@@ -21,3 +21,16 @@ Nesta secção, documento problemas reais que resolvi no Kaggle e em exercícios
 
 ## 🧠 Mentalidade de Dados
 "A tecnologia é feita de constância. Cada query otimizada é um passo mais perto da Engenharia de Dados."
+
+
+---
+
+## 🎯 Desafio de Hoje: O Mistério do Filtro e Agrupamento
+
+### 🚩 Código com Erros:
+```sql
+SELECT nome_cliente, total_vendas
+FROM tabela_vendas
+WHERE nome_cliente = NULL
+GROUP BY nome_cliente
+HAVING total_vendas > 1000
